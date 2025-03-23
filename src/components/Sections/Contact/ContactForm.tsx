@@ -1,4 +1,5 @@
 import {FC, memo, useCallback, useMemo, useState} from 'react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -35,6 +36,20 @@ const ContactForm: FC = memo(() => {
       /**
        * This is a good starting point to wire up your form submission logic
        * */
+      emailjs.send(
+        'service_kotqt9o',
+        'template_cje2x0g',
+        data as unknown as Record<string, unknown>,
+        'oLDgXja73_cqxpVYx',
+      ).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setData(defaultData);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      )
       console.log('Data to send: ', data);
     },
     [data],

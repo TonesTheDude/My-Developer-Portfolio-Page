@@ -38,7 +38,7 @@ const Portfolio: FC = memo(() => {
 Portfolio.displayName = 'Portfolio';
 export default Portfolio;
 
-const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, description}}) => {
+const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {Live, Repo, title, description}}) => {
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const linkRef = useRef<HTMLAnchorElement>(null);
@@ -60,7 +60,13 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
     },
     [mobile, showOverlay],
   );
-
+const handleclick = useCallback(
+    (event: MouseEvent<HTMLElement>) => {
+      event.preventDefault();
+      window.open(Repo, '_blank');
+    },
+    [Repo],
+  );
   return (
     <a
       className={classNames(
@@ -68,7 +74,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
         {'opacity-0 hover:opacity-80': !mobile},
         showOverlay ? 'opacity-80' : 'opacity-0',
       )}
-      href={url}
+      href={Live}
       onClick={handleItemClick}
       ref={linkRef}
       target="_blank">
@@ -76,6 +82,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
           <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
           <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+          <p className="text-xs text-white opacity-100 sm:text-sm" onClick={handleclick}>{`GitHub: ${Repo}`}</p>
         </div>
         <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
       </div>

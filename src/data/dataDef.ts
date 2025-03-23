@@ -64,7 +64,7 @@ export interface Stat {
 
 export interface Skill {
   name: string;
-  level: number;
+  level?: number;
   max?: number;
 }
 
@@ -79,7 +79,8 @@ export interface SkillGroup {
 export interface PortfolioItem {
   title: string;
   description: string;
-  url: string;
+  Live: string;
+  Repo: string;
   image: string | StaticImageData;
 }
 
