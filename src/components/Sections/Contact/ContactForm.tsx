@@ -1,5 +1,5 @@
-import {FC, memo, useCallback, useMemo, useState} from 'react';
 import emailjs from '@emailjs/browser';
+import {FC, memo, useCallback, useMemo, useState} from 'react';
 
 interface FormData {
   name: string;
@@ -49,7 +49,7 @@ const ContactForm: FC = memo(() => {
         );
       console.log('Data to send: ', data);
     },
-    [data],
+    [data, defaultData],
   );
 
   const inputClasses =
