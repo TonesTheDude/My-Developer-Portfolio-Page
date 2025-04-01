@@ -60,7 +60,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {Live, Repo, title, 
     },
     [mobile, showOverlay],
   );
-const handleclick = useCallback(
+  const handleclick = useCallback(
     (event: MouseEvent<HTMLElement>) => {
       event.preventDefault();
       window.open(Repo, '_blank');
@@ -82,9 +82,11 @@ const handleclick = useCallback(
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
           <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
           <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
-          <p className="text-xs text-white opacity-100 sm:text-sm" onClick={handleclick}>{`GitHub: ${Repo}`}
+          <p className="text-xs text-white opacity-100 sm:text-sm" onClick={handleclick}>
+            {`GitHub: ${Repo}`}
           </p>
-          <p className="text-xs text-white opacity-100 sm:text-sm" onClick={handleclick}>{`Live: ${Live}`}
+          <p className="text-xs text-white opacity-100 sm:text-sm" onClick={handleclick}>
+            {`Live: ${Live}`}
           </p>
         </div>
         <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />

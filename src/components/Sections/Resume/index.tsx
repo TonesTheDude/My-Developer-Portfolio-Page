@@ -1,5 +1,4 @@
 import {FC, memo} from 'react';
-
 import {education, experience, SectionId, skills} from '../../../data/data';
 import Section from '../../Layout/Section';
 import ResumeSection from './ResumeSection';
@@ -9,18 +8,18 @@ import TimelineItem from './TimelineItem';
 const Resume: FC = memo(() => {
   return (
     <Section className="bg-neutral-100" sectionId={SectionId.Resume}>
-      <div className= "flex flex-col gap-y-8 py-8">
+      <div className="flex flex-col gap-y-8 py-8">
         <h2 className="text-xl font-bold uppercase text-neutral-800">Resume</h2>
-      <a className="text-xl font-bold uppercase text-neutral-800"
-                                href={"/AnthonyJamesLangdon.pdf"}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                
-                            >
-                                Click to Open
-                            </a>
+        <a
+          className="text-xl font-bold uppercase text-neutral-800"
+          href='/AnthonyJamesLangdon.pdf'
+          rel="noopener noreferrer"
+          target="_blank"
+          >
+          Click to Open
+        </a>
       </div>
-      
+
       <div className="flex flex-col divide-y-2 divide-neutral-300">
         <ResumeSection title="Education">
           {education.map((item, index) => (
