@@ -163,7 +163,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Portfolio Website',
     description: 'Portfolio Page A portfolio page using my skillset to showcase and interact with potential employees.',
-    Live: 'https://reactresume.com',
+    Live: 'https://anthonylangdonportfolio.netlify.app/',
     Repo: 'https://github.com/TonesTheDude/My-Developer-Portfolio-Page.git',
     image: porfolioImage2,
   },
