@@ -156,7 +156,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Watering Assistant',
     description: 'Create a website that generates a watering schedule for houseplants from the input by the user.',
-    Live: 'https://reactresume.com',
+    Live: 'https://osgravy.github.io/Project-1-Plants/',
     Repo: 'https://github.com/Osgravy/Project-1-Plants.git',
     image: porfolioImage1,
   },
@@ -173,20 +173,6 @@ export const portfolioItems: PortfolioItem[] = [
     Live: 'https://my-weather-dashboard-jh5e.onrender.com/',
     Repo: 'https://github.com/TonesTheDude/My-Weather-Dashboard.git',
     image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    Live: 'https://reactresume.com',
-    Repo: 'https://github',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    Live: 'https://reactresume.com',
-    Repo: 'https://github',
-    image: porfolioImage5,
   },
 ];
 
