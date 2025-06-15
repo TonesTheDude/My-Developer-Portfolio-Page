@@ -15,7 +15,6 @@ import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import profilepic from '../images/profilepic.jpg';
 import {
   About,
@@ -157,7 +156,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Watering Assistant',
     description: 'Create a website that generates a watering schedule for houseplants from the input by the user.',
     Live: 'https://osgravy.github.io/Project-1-Plants/',
-    Repo: 'https://github.com/Osgravy/Project-1-Plants.git',
+    Repo: 'https://github.com/TonesTheDude/Project-1-Plants',
     image: porfolioImage1,
   },
   {
@@ -173,6 +172,13 @@ export const portfolioItems: PortfolioItem[] = [
     Live: 'https://my-weather-dashboard-jh5e.onrender.com/',
     Repo: 'https://github.com/TonesTheDude/My-Weather-Dashboard.git',
     image: porfolioImage3,
+  },
+  {
+    title: 'Project Buddy',
+    description: 'A weather dashboard that allows you to see 5 day forecast for a city you search for.',
+    Live: 'https://project-buddy-9qv7.onrender.com/login',
+    Repo: 'https://github.com/TonesTheDude/Project-Buddy',
+    image: porfolioImage4,
   },
 ];
 
